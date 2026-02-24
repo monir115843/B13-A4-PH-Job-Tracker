@@ -12,6 +12,15 @@
             background-color: #ffffff;
             color: #1a1a1a;
         }
+          .tab-btn.active {
+            background-color: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+        .main-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body class="p-4 md:p-10">
@@ -37,6 +46,24 @@
             </div>
         </div>
     </header>
+       <!-- Content -->
+    <main class="main-container">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-xl font-bold text-gray-800">Available Jobs</h2>
+            <div class="text-sm font-medium text-gray-500">
+                Jobs Count: <span id="tab-count" class="text-blue-600 font-bold">0</span>
+            </div>
+        </div>
+
+    <!-- Filter Tabs -->
+        <div class="flex gap-2 mb-10">
+            <button onclick="switchTab('all')" id="tab-all" class="tab-btn active px-5 py-1.5 rounded-full border border-gray-200 text-xs font-semibold transition">All</button>
+            <button onclick="switchTab('interview')" id="tab-interview" class="tab-btn px-5 py-1.5 rounded-full border border-gray-200 text-xs font-semibold transition">Interview</button>
+            <button onclick="switchTab('rejected')" id="tab-rejected" class="tab-btn px-5 py-1.5 rounded-full border border-gray-200 text-xs font-semibold transition">Rejected</button>
+        </div>
+
+
+
 
 </body>
 </html>
